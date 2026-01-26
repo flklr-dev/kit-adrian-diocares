@@ -67,7 +67,7 @@ export function ChatBot() {
                 ...prev,
                 { role: "assistant", content: data.content },
             ]);
-        } catch (error: any) {
+        } catch (error: unknown) {
             setMessages((prev) => [
                 ...prev,
                 {
@@ -140,7 +140,7 @@ export function ChatBot() {
                                                     : "bg-muted rounded-tl-none"
                                             )}
                                         >
-                                            <ReactMarkdown
+                                            <div
                                                 className={cn(
                                                     "prose prose-sm dark:prose-invert max-w-none break-words",
                                                     "[&_ul]:list-disc [&_ul]:pl-4 [&_ol]:list-decimal [&_ol]:pl-4",
@@ -148,8 +148,10 @@ export function ChatBot() {
                                                     m.role === "user" ? "text-primary-foreground" : "text-foreground"
                                                 )}
                                             >
-                                                {m.content}
-                                            </ReactMarkdown>
+                                                <ReactMarkdown>
+                                                    {m.content}
+                                                </ReactMarkdown>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
