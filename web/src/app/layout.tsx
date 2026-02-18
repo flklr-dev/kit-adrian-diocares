@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   title: "Kit Adrian B. Diocares | IT Student & Mobile Developer",
   description: "Portfolio of Kit Adrian B. Diocares, IT Student and Freelance Mobile App Developer.",
   icons: {
-    icon: "/kit.jpg",
-    shortcut: "/kit.jpg",
-    apple: "/kit.jpg",
+    icon: "/kit.png",
+    shortcut: "/kit.png",
+    apple: "/kit.png",
   },
 };
 
