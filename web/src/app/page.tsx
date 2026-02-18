@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
           <Avatar className="w-32 h-32 md:w-40 md:h-40 rounded-2xl shadow-xl">
-            <AvatarImage src="/kit.jpg" alt="Bryl Lim" className="object-cover" />
+            <AvatarImage src="/kit.png" alt="Bryl Lim" className="object-cover" />
             <AvatarFallback className="rounded-2xl">BL</AvatarFallback>
           </Avatar>
 
