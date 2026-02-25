@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { MapPin, Mail, Download, CheckCircle2, Briefcase, Code2, Rocket, Trophy, Linkedin, Github, Link, LayoutGrid, ExternalLink, ChevronRight, Gamepad2, BookOpen, Music } from "lucide-react";
 import Image from "next/image";
 import { ChatBot } from "@/components/chat-bot";
+import { GithubCalendarSection } from "@/components/github-calendar-section";
 
 
 export default function Home() {
@@ -343,6 +344,8 @@ export default function Home() {
             </section>
           </div>
         </div>
+
+        <GithubCalendarSection />
 
         <footer className="mt-12 pt-4 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
