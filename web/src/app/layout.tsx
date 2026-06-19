@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -13,9 +13,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Kit Adrian B. Diocares | IT Student & Mobile Developer",
-  description: "Portfolio of Kit Adrian B. Diocares, IT Student and Freelance Mobile App Developer.",
+  title: "Kit Adrian B. Diocares | Freelance Mobile Developer",
+  description: "Portfolio of Kit Adrian B. Diocares, Freelance Mobile App Developer.",
   icons: {
     icon: "/kit.png",
     shortcut: "/kit.png",
@@ -31,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

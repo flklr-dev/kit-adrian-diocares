@@ -83,17 +83,17 @@ export function ChatBot() {
     return (
         <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
             {isOpen && (
-                <Card className="w-[380px] md:w-[450px] h-[600px] shadow-2xl flex flex-col border-border bg-background animate-in slide-in-from-bottom-5 duration-300">
-                    <CardHeader className="p-4 border-b flex flex-row items-center justify-between bg-muted/50">
+                <Card className="w-[380px] md:w-[450px] h-[600px] flex flex-col border-4 border-border bg-background animate-in slide-in-from-bottom-5 duration-300 rounded-none shadow-neo-lg">
+                    <CardHeader className="p-4 border-b-4 border-border flex flex-row items-center justify-between bg-secondary text-secondary-foreground">
                         <div className="flex items-center gap-2">
-                            <Avatar className="w-8 h-8">
+                            <Avatar className="w-8 h-8 border-2 border-border shadow-none">
                                 <AvatarImage src="/kit.jpg" alt="Kit Adrian" />
                                 <AvatarFallback>K</AvatarFallback>
                             </Avatar>
                             <div>
-                                <h3 className="font-bold text-sm">Kit Adrian</h3>
-                                <p className="text-[10px] text-muted-foreground flex items-center gap-1">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> Online
+                                <h3 className="font-black text-sm uppercase tracking-tight">Kit Adrian</h3>
+                                <p className="text-[10px] font-black uppercase flex items-center gap-1">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-green-500 border border-border"></span> Online
                                 </p>
                             </div>
                         </div>
@@ -101,7 +101,7 @@ export function ChatBot() {
                             variant="ghost"
                             size="icon"
                             onClick={() => setIsOpen(false)}
-                            className="h-8 w-8 rounded-full"
+                            className="h-8 w-8 border-2 border-border shadow-none hover:bg-primary hover:text-white"
                         >
                             <X className="w-4 h-4" />
                         </Button>
@@ -119,14 +119,14 @@ export function ChatBot() {
                                     >
                                         <div
                                             className={cn(
-                                                "w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center",
-                                                m.role === "user" ? "bg-muted" : "bg-primary/10"
+                                                "w-8 h-8 shrink-0 flex items-center justify-center border-2 border-border",
+                                                m.role === "user" ? "bg-secondary text-secondary-foreground" : "bg-primary text-primary-foreground"
                                             )}
                                         >
                                             {m.role === "user" ? (
                                                 <User className="w-4 h-4" />
                                             ) : (
-                                                <Avatar className="w-8 h-8">
+                                                <Avatar className="w-8 h-8 border-none shadow-none">
                                                     <AvatarImage src="/kit.jpg" alt="Kit Adrian" />
                                                     <AvatarFallback>K</AvatarFallback>
                                                 </Avatar>
@@ -134,15 +134,15 @@ export function ChatBot() {
                                         </div>
                                         <div
                                             className={cn(
-                                                "max-w-[80%] rounded-2xl px-4 py-2",
+                                                "max-w-[80%] border-4 border-border px-4 py-2",
                                                 m.role === "user"
-                                                    ? "bg-primary text-primary-foreground rounded-tr-none"
-                                                    : "bg-muted rounded-tl-none"
+                                                    ? "bg-primary text-primary-foreground shadow-neo-sm"
+                                                    : "bg-card text-card-foreground shadow-neo-sm"
                                             )}
                                         >
                                             <div
                                                 className={cn(
-                                                    "prose prose-sm dark:prose-invert max-w-none break-words",
+                                                    "prose prose-sm dark:prose-invert max-w-none wrap-break-word font-black uppercase tracking-tight",
                                                     "[&_ul]:list-disc [&_ul]:pl-4 [&_ol]:list-decimal [&_ol]:pl-4",
                                                     "[&_li]:my-1 [&_p]:leading-relaxed",
                                                     m.role === "user" ? "text-primary-foreground" : "text-foreground"
@@ -157,19 +157,19 @@ export function ChatBot() {
                                 ))}
                                 {isLoading && (
                                     <div className="flex gap-3 text-sm">
-                                        <Avatar className="w-8 h-8">
+                                        <Avatar className="w-8 h-8 border-2 border-border shadow-none">
                                             <AvatarImage src="/kit.jpg" alt="Kit Adrian" />
                                             <AvatarFallback>K</AvatarFallback>
                                         </Avatar>
-                                        <div className="bg-muted rounded-2xl rounded-tl-none px-4 py-2">
-                                            <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
+                                        <div className="bg-card border-4 border-border shadow-neo-sm px-4 py-2">
+                                            <Loader2 className="w-4 h-4 animate-spin text-primary" />
                                         </div>
                                     </div>
                                 )}
                             </div>
                         </ScrollArea>
                     </CardContent>
-                    <CardFooter className="p-4 border-t bg-muted/30">
+                    <CardFooter className="p-4 border-t-4 border-border bg-secondary/20">
                         <form
                             onSubmit={(e) => {
                                 e.preventDefault();
@@ -178,17 +178,17 @@ export function ChatBot() {
                             className="flex w-full gap-2"
                         >
                             <Input
-                                placeholder="Ask me anything..."
+                                placeholder="ASK ME ANYTHING..."
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 autoFocus
-                                className="rounded-xl border-border bg-background"
+                                className="border-4 border-border bg-background font-black uppercase text-xs h-12 shadow-neo-sm focus:shadow-neo transition-all"
                             />
                             <Button
                                 type="submit"
                                 size="icon"
                                 disabled={!input.trim() || isLoading}
-                                className="rounded-xl"
+                                className="h-12 w-12 border-4 border-border"
                             >
                                 <Send className="w-4 h-4" />
                             </Button>
@@ -200,12 +200,12 @@ export function ChatBot() {
             <Button
                 onClick={() => setIsOpen(!isOpen)}
                 className={cn(
-                    "rounded-full shadow-2xl h-11 px-10 gap-2 transition-all hover:scale-110",
-                    isOpen ? "bg-muted text-foreground" : "bg-primary text-primary-foreground"
+                    "border-4 border-border h-12 px-10 gap-2 transition-all hover:scale-105",
+                    isOpen ? "bg-card text-foreground" : "bg-primary text-primary-foreground"
                 )}
             >
-                {!isOpen && <MessageSquareMore className="w-5 h-5 animate-tilt" />}
-                {!isOpen ? "Chat with Kit" : "Close Chat"}
+                {!isOpen && <MessageSquareMore className="w-5 h-5" />}
+                {!isOpen ? "CHAT WITH KIT" : "CLOSE CHAT"}
             </Button>
         </div>
     );
