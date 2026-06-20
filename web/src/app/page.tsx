@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Link from "next/link";
 import { MapPin, Download, Briefcase, Code2, Trophy, Linkedin, Github, LayoutGrid, Gamepad2 } from "lucide-react";
 import { ChatBot } from "@/components/chat-bot";
 import { GithubCalendarSection } from "@/components/github-calendar-section";
@@ -115,8 +116,10 @@ export default function Home() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
-              <Button size="lg" className="bg-primary text-primary-foreground">
-                <Download className="w-5 h-5 mr-2" /> DOWNLOAD RESUME
+              <Button size="lg" asChild className="bg-primary text-primary-foreground">
+                <Link href="/resume">
+                  <Download className="w-5 h-5 mr-2" /> DOWNLOAD RESUME
+                </Link>
               </Button>
               {socialLinks.map(({ name, url, Icon }) => (
                 <Button
