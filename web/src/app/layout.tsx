@@ -24,8 +24,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kit Adrian B. Diocares | Freelance Mobile Developer",
-  description: "Portfolio of Kit Adrian B. Diocares, Freelance Mobile App Developer.",
+  title: "Kit Adrian B. Diocares | Freelance Developer — Mobile & Web",
+  description: "Portfolio of Kit Adrian B. Diocares, Freelance Developer specializing in mobile and web applications.",
   icons: {
     icon: "/kit.png",
     shortcut: "/kit.png",
