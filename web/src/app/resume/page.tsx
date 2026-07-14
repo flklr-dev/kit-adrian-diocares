@@ -33,7 +33,7 @@ export default function ResumePage() {
               </Link>
             </Button>
             <Button asChild className="bg-primary text-primary-foreground">
-              <a href="/kit-resume-2.pdf" download="Kit-Adrian-Diocares-Resume.pdf">
+              <a href="/Kit Adrian Diocares - Resume.pdf" download="Kit Adrian Diocares - Resume.pdf">
                 <Download className="w-4 h-4 mr-2" /> Download Again
               </a>
             </Button>
@@ -49,9 +49,9 @@ export default function ResumePage() {
           <CardContent>
             <div className="overflow-hidden border-4 border-border bg-background shadow-neo-sm">
               <iframe
-                src="/kit-resume-2.pdf"
+                src="/Kit Adrian Diocares - Resume.pdf"
                 title="Kit Adrian Resume"
-                className="w-full h-[75vh]"
+                className="w-full h-[90vh]"
               />
             </div>
           </CardContent>

@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-const RESUME_PATH = "/kit-resume-2.pdf";
-const RESUME_FILENAME = "Kit-Adrian-Diocares-Resume.pdf";
+const RESUME_PATH = "/Kit Adrian Diocares - Resume.pdf";
+const RESUME_FILENAME = "Kit Adrian Diocares - Resume.pdf";
 
 export function ResumeAutoDownload() {
   useEffect(() => {
