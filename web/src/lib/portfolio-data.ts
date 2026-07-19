@@ -93,6 +93,8 @@ export type Project = {
   tags: string[];
   role: string;
   badge: string;
+  /** Optional build status shown on cards (e.g. "In Development"). */
+  status?: string;
   url?: string;
 };
 
@@ -138,6 +140,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Stable Diffusion", "Canvas API", "Node.js"],
     role: "Full-Stack Developer",
     badge: "SaaS Product",
+    status: "WIP",
   },
 ];
 
@@ -185,7 +188,10 @@ export function buildAiKnowledgeBase(): string {
   const projectLines = projects
     .map((p) => {
       const liveUrl = p.url ? ` Live at ${p.url}.` : "";
-      return `  - **${p.title}** (${p.badge}, role: ${p.role}): ${p.description} Built with ${p.tags.join(", ")}.${liveUrl}`;
+      const statusNote = p.status
+        ? ` Status: ${p.status === "WIP" ? "In Development (WIP)" : p.status}.`
+        : "";
+      return `  - **${p.title}** (${p.badge}, role: ${p.role}): ${p.description} Built with ${p.tags.join(", ")}.${statusNote}${liveUrl}`;
     })
     .join("\n");
 

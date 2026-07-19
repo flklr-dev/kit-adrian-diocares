@@ -18,6 +18,14 @@ export function ProjectListItem({ project }: ProjectListItemProps) {
               <h2 className="font-black text-sm md:text-base uppercase leading-tight tracking-tight truncate">
                 {project.title}
               </h2>
+              {project.status && (
+                <span
+                  title="In Development"
+                  className="text-[8px] font-black uppercase bg-primary text-primary-foreground border border-border px-1 py-px shrink-0 leading-none"
+                >
+                  {project.status}
+                </span>
+              )}
               {project.url && (
                 <a
                   href={project.url}

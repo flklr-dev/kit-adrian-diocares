@@ -31,6 +31,14 @@ export function ProjectCard({ project, tagLimit }: ProjectCardProps) {
             <h3 className="font-black text-xl uppercase leading-none tracking-tight">
               {project.title}
             </h3>
+            {project.status && (
+              <span
+                title="In Development"
+                className="text-[8px] font-black uppercase bg-primary text-primary-foreground border border-border px-1 py-px shrink-0 leading-none"
+              >
+                {project.status}
+              </span>
+            )}
             {project.url && (
               <a
                 href={project.url}
