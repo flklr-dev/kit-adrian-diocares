@@ -142,10 +142,21 @@ export const projects: Project[] = [
     badge: "SaaS Product",
     status: "WIP",
   },
+  {
+    title: "Landed",
+    description:
+      "AI-assisted job tracking and career intelligence platform featuring automated job URL extraction, natural-language updates, and semantic resume fit ranking.",
+    tags: ["Next.js", "TypeScript", "Express.js", "PostgreSQL", "pgvector", "Redis", "Docker"],
+    role: "Full-Stack & Cloud Engineer",
+    badge: "Developer SaaS",
+    status: "WIP",
+  },
 ];
 
 /** Projects shown on the home page (excludes entries only listed on /projects). */
-export const homeProjects = projects.filter((p) => p.title !== "CodeMentor AI");
+export const homeProjects = projects.filter(
+  (p) => p.title !== "CodeMentor AI" && p.title !== "Thumbnail-Lab"
+);
 
 export type BeyondCodeItem = {
   title: string;
