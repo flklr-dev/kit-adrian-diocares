@@ -10,12 +10,12 @@
 
 export const profile = {
   name: "Kit Adrian B. Diocares",
-  title: "Freelance Developer — Mobile & Web",
+  title: "Full Stack Developer — Mobile & Web",
   location: "Davao City, Philippines",
   status: "Open for work",
   email: "kitadriand@gmail.com",
   summary:
-    "BSIT Graduate (Cum Laude, 2026) from Davao Oriental State University and a Freelance Developer specializing in mobile and web applications — cross-platform apps with React Native & Expo, plus scalable web platforms with Next.js & TypeScript. Currently focused on integrating AI tooling into the workflow to accelerate delivery without sacrificing quality, security, or maintainability.",
+    "BSIT Graduate (Cum Laude, 2026) from Davao Oriental State University and a Full Stack Developer specializing in mobile and web applications — cross-platform apps with React Native & Expo, plus scalable web platforms with Next.js & TypeScript. Currently focused on integrating AI tooling into the workflow to accelerate delivery without sacrificing quality, security, or maintainability.",
   resumeUrl: "/resume",
 };
 

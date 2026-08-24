@@ -179,7 +179,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="pt-3 text-base leading-relaxed font-bold space-y-4">
                   <p>
-                    I&apos;m a <span className="bg-secondary text-secondary-foreground px-2 py-0.5 border-2 border-border shadow-neo-sm">Freelance Developer</span> specializing in building premium mobile and web environments — ranging from specialized cross-platform mobile apps using React Native and Expo to high-speed web platforms in Next.js and TypeScript.
+                    I&apos;m a <span className="bg-secondary text-secondary-foreground px-2 py-0.5 border-2 border-border shadow-neo-sm">Full Stack Developer</span> specializing in building premium mobile and web environments — ranging from specialized cross-platform mobile apps using React Native and Expo to high-speed web platforms in Next.js and TypeScript.
                   </p>
                   <p>
                     Over my active freelance career, I have collaborated with digital startups and international clients on platforms like Fiverr to turn complex, theoretical ideas into robust, deployed application products.
